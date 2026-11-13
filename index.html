@@ -136,6 +136,20 @@
   .product ul { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 6px; font-size: 0.92rem; font-weight: 600; }
   .product li::before { content: "✓ "; color: var(--red); font-weight: 800; }
 
+  /* Pilihan paket */
+  .shop { margin-top: 26px; }
+  .shop > h2 { font-size: 1.3rem; margin: 10px 0 4px; }
+  .shop-sub { margin: 0 0 4px; color: var(--muted); font-size: 0.92rem; }
+  .shop .product { position: relative; margin-top: 18px; }
+  .product h3 { font-size: 1.15rem; margin: 6px 0 10px; }
+  .tier-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  .tier { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; background: var(--navy); color: var(--sun); padding: 3px 10px; border-radius: 999px; }
+  .tier-lite { background: #fff; color: var(--ink); border: 2px solid var(--ink); }
+  .price { font-size: 1.25rem; font-weight: 800; color: var(--ink); }
+  .badge-best { position: absolute; top: 12px; left: 12px; z-index: 1; background: var(--red); color: #fff; font-size: 0.78rem; font-weight: 800;
+                padding: 5px 12px; border-radius: 999px; border: 2px solid var(--ink); }
+  .product-lite { background: var(--sun-soft); }
+
   /* Rekomendasi Shopee */
   .gear {
     margin-top: 22px;
@@ -273,21 +287,40 @@
     <a class="btn btn-sun" href="https://www.instagram.com/lagibangunkarir/reels/" target="_blank" rel="noopener">▶ Tonton serialnya di Instagram</a>
   </section>
 
-  <section class="product" aria-labelledby="produk-judul">
-    <a href="https://lagibangunkarir.myr.id/catalog/paket-cv-siap-kerja/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-      <img src="img/paket-cv-siap-kerja.png" alt="" width="1080" height="1080" loading="lazy">
-    </a>
-    <div class="product-body">
-      <span class="eyebrow">🛍️ Produk digital</span>
-      <h2 id="produk-judul">Paket CV Siap Kerja</h2>
-      <p>Template CV seperti punya Tomo. Tinggal ganti data, simpan PDF, langsung kirim lamaran!</p>
-      <ul>
-        <li>2 template CV siap edit (Modern &amp; ATS)</li>
-        <li>Panduan lengkap cara mengisi CV</li>
-        <li>Bonus template email lamaran</li>
-      </ul>
-      <a class="btn btn-red" href="https://lagibangunkarir.myr.id/catalog/paket-cv-siap-kerja/" target="_blank" rel="noopener">🛒 Lihat &amp; beli template CV</a>
-    </div>
+  <section class="shop" aria-labelledby="produk-judul">
+    <span class="eyebrow">🛍️ Produk digital</span>
+    <h2 id="produk-judul">Pilih paket persiapan kerjamu</h2>
+    <p class="shop-sub">Template siap edit seperti punya Tomo. Tinggal ganti data, simpan PDF, langsung kirim lamaran!</p>
+
+    <article class="product product-best">
+      <span class="badge-best">⭐ Paling laris</span>
+      <a href="https://lagibangunkarir.myr.id/catalog/paket-standar-lamaran-lengkap/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+        <img src="img/paket-standar.png" alt="" width="1080" height="1080" loading="lazy">
+      </a>
+      <div class="product-body">
+        <div class="tier-row"><span class="tier">STANDAR</span><span class="price">Rp49.000</span></div>
+        <h3>Paket Lamaran Lengkap</h3>
+        <ul>
+          <li>5 template CV (ATS, Modern, Fresh Graduate, Kreatif, Profesional)</li>
+          <li>10 template surat lamaran per posisi</li>
+          <li>Panduan lolos interview: 30 pertanyaan + jawaban</li>
+          <li>Tracker lamaran kerja (Excel/Sheets)</li>
+        </ul>
+        <a class="btn btn-red" href="https://lagibangunkarir.myr.id/catalog/paket-standar-lamaran-lengkap/" target="_blank" rel="noopener">🛒 Ambil Paket STANDAR</a>
+      </div>
+    </article>
+
+    <article class="product product-lite">
+      <div class="product-body">
+        <div class="tier-row"><span class="tier tier-lite">HEMAT</span><span class="price">Rp25.000</span></div>
+        <h3>Paket CV Siap Kerja</h3>
+        <ul>
+          <li>2 template CV siap edit (Modern &amp; ATS)</li>
+          <li>Panduan mengisi CV + template email lamaran</li>
+        </ul>
+        <a class="btn" href="https://lagibangunkarir.myr.id/catalog/paket-hemat-cv-siap-kerja/" target="_blank" rel="noopener">Ambil Paket HEMAT</a>
+      </div>
+    </article>
   </section>
 
   <section class="gear" aria-labelledby="gear-judul">
