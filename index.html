@@ -145,7 +145,10 @@
   .tier-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
   .tier { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; background: var(--navy); color: var(--sun); padding: 3px 10px; border-radius: 999px; }
   .tier-lite { background: #fff; color: var(--ink); border: 2px solid var(--ink); }
-  .price { font-size: 1.25rem; font-weight: 800; color: var(--ink); }
+  .price { font-size: 1.25rem; font-weight: 800; color: var(--ink); white-space: nowrap; }
+  .price s { font-size: 0.8rem; font-weight: 600; color: var(--muted); margin-right: 2px; }
+  .product-pro .price s { color: #a9b0d6; }
+  .promo { display: inline-block; margin: 8px 0 0; background: var(--red); color: #fff; font-size: 0.85rem; font-weight: 700; padding: 6px 12px; border-radius: 10px; border: 2px solid var(--ink); }
   .badge-best { position: absolute; top: 12px; left: 12px; z-index: 1; background: var(--red); color: #fff; font-size: 0.78rem; font-weight: 800;
                 padding: 5px 12px; border-radius: 999px; border: 2px solid var(--ink); }
   .product-lite { background: var(--sun-soft); }
@@ -304,6 +307,7 @@
     <span class="eyebrow">🛍️ Produk digital</span>
     <h2 id="produk-judul">Pilih paket persiapan kerjamu</h2>
     <p class="shop-sub">Template siap edit seperti punya Tomo. Tinggal ganti data, simpan PDF, langsung kirim lamaran!</p>
+    <p class="promo">🔥 Harga perkenalan sampai <strong>30 November 2026</strong></p>
 
     <article class="product product-best">
       <span class="badge-best">⭐ Paling laris</span>
@@ -311,7 +315,7 @@
         <img src="img/paket-standar.png" alt="" width="1080" height="1080" loading="lazy">
       </a>
       <div class="product-body">
-        <div class="tier-row"><span class="tier">STANDAR</span><span class="price">Rp49.000</span></div>
+        <div class="tier-row"><span class="tier">STANDAR</span><span class="price"><s>Rp69.000</s> Rp49.000</span></div>
         <h3>Paket Lamaran Lengkap</h3>
         <ul>
           <li>5 template CV (ATS, Modern, Fresh Graduate, Kreatif, Profesional)</li>
@@ -329,7 +333,7 @@
         <div class="pro-head">
           <img class="pro-thumb" src="img/paket-premium.png" alt="" width="1080" height="1080" loading="lazy">
           <div>
-            <div class="tier-row"><span class="tier tier-pro">PREMIUM</span><span class="price">Rp99.000</span></div>
+            <div class="tier-row"><span class="tier tier-pro">PREMIUM</span><span class="price"><s>Rp129.000</s> Rp99.000</span></div>
             <h3>Siap Kerja Pro</h3>
           </div>
         </div>
@@ -346,7 +350,7 @@
 
     <article class="product product-lite">
       <div class="product-body">
-        <div class="tier-row"><span class="tier tier-lite">HEMAT</span><span class="price">Rp25.000</span></div>
+        <div class="tier-row"><span class="tier tier-lite">HEMAT</span><span class="price"><s>Rp35.000</s> Rp25.000</span></div>
         <h3>Paket CV Siap Kerja</h3>
         <ul>
           <li>2 template CV siap edit (Modern &amp; ATS)</li>
