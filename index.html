@@ -119,6 +119,23 @@
 
   .links { margin-top: 22px; display: grid; gap: 14px; }
 
+  /* Kartu produk */
+  .product {
+    margin-top: 22px;
+    background: var(--card);
+    border: 3px solid var(--ink);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .product img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-bottom: 3px solid var(--ink); }
+  .product-body { padding: 16px 18px 18px; }
+  .product-body .eyebrow { background: var(--red); color: #fff; }
+  .product h2 { font-size: 1.25rem; margin: 10px 0 4px; }
+  .product p { margin: 0 0 12px; color: var(--muted); font-size: 0.92rem; }
+  .product ul { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 6px; font-size: 0.92rem; font-weight: 600; }
+  .product li::before { content: "✓ "; color: var(--red); font-weight: 800; }
+
   /* Panduan yang bisa dibuka */
   details {
     background: var(--card);
@@ -217,6 +234,23 @@
       <li><span class="ep-num">3</span> Interview Pertama <span class="ep-soon">Segera tayang</span></li>
     </ol>
     <a class="btn btn-sun" href="https://www.instagram.com/lagibangunkarir/reels/" target="_blank" rel="noopener">▶ Tonton serialnya di Instagram</a>
+  </section>
+
+  <section class="product" aria-labelledby="produk-judul">
+    <a href="https://lagibangunkarir.myr.id/catalog/paket-cv-siap-kerja-kerja/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="img/paket-cv-siap-kerja.png" alt="" width="1080" height="1080" loading="lazy">
+    </a>
+    <div class="product-body">
+      <span class="eyebrow">🛍️ Produk digital</span>
+      <h2 id="produk-judul">Paket CV Siap Kerja</h2>
+      <p>Template CV seperti punya Tomo. Tinggal ganti data, simpan PDF, langsung kirim lamaran!</p>
+      <ul>
+        <li>2 template CV siap edit (Modern &amp; ATS)</li>
+        <li>Panduan lengkap cara mengisi CV</li>
+        <li>Bonus template email lamaran</li>
+      </ul>
+      <a class="btn btn-red" href="https://lagibangunkarir.myr.id/catalog/paket-cv-siap-kerja-kerja/" target="_blank" rel="noopener">🛒 Lihat &amp; beli template CV</a>
+    </div>
   </section>
 
   <nav class="links" aria-label="Tautan">
