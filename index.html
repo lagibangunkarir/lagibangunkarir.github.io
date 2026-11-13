@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lagi Bangun Karir</title>
+<meta name="description" content="Bangun karier pelan-pelan, yang penting jalan terus. Serial Tomo Sang Pencari Kerja, tips CV, dan cara aman cari loker.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbf5ea;
+    --card: #ffffff;
+    --ink: #1d2340;
+    --muted: #5d6280;
+    --navy: #1f2a5c;
+    --sun: #ffc93c;
+    --sun-soft: #fff1c7;
+    --red: #e2483d;
+    --line: #ecdfc6;
+    --shadow: 0 4px 0 #1d2340;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    background-image: radial-gradient(circle at 15% 0%, #ffe6a3 0, transparent 40%),
+                      radial-gradient(circle at 100% 30%, #ffd9cf 0, transparent 35%);
+    color: var(--ink);
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+  main {
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 40px 16px 32px;
+  }
+
+  /* Profil */
+  .profile { text-align: center; }
+  .avatar {
+    width: 120px; height: 120px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    background: var(--sun);
+    border: 3px solid var(--ink);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .avatar svg { display: block; width: 100%; height: 100%; }
+  h1 { font-size: 1.6rem; font-weight: 800; margin: 0; letter-spacing: -0.02em; }
+  .handle { color: var(--muted); font-weight: 600; margin: 2px 0 10px; }
+  .bio { margin: 0 auto; max-width: 320px; font-size: 0.98rem; }
+
+  /* Kartu serial */
+  .series {
+    margin-top: 28px;
+    background: var(--navy);
+    color: #fff;
+    border: 3px solid var(--ink);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 18px;
+  }
+  .eyebrow {
+    display: inline-block;
+    background: var(--sun);
+    color: var(--ink);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 999px;
+  }
+  .series h2 { font-size: 1.25rem; margin: 10px 0 4px; }
+  .series p { margin: 0 0 14px; color: #d6dbf5; font-size: 0.92rem; }
+  .episodes { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 8px; }
+  .episodes li {
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 9px 12px;
+    font-size: 0.92rem;
+  }
+  .ep-num {
+    flex: none;
+    width: 30px; height: 30px;
+    display: grid; place-items: center;
+    background: var(--sun); color: var(--ink);
+    border-radius: 50%;
+    font-weight: 800; font-size: 0.8rem;
+  }
+  .ep-soon { margin-left: auto; font-size: 0.72rem; font-weight: 700; color: var(--sun); white-space: nowrap; }
+
+  /* Tombol */
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%;
+    padding: 14px 18px;
+    border: 3px solid var(--ink);
+    border-radius: 16px;
+    background: var(--card);
+    color: var(--ink);
+    font: inherit; font-weight: 700;
+    text-decoration: none;
+    box-shadow: var(--shadow);
+    transition: transform .12s ease, box-shadow .12s ease;
+    cursor: pointer;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 0 var(--ink); }
+  .btn:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--ink); }
+  .btn:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+  .btn-sun { background: var(--sun); }
+  .btn-red { background: var(--red); color: #fff; }
+
+  .links { margin-top: 22px; display: grid; gap: 14px; }
+
+  /* Panduan yang bisa dibuka */
+  details {
+    background: var(--card);
+    border: 3px solid var(--ink);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  summary {
+    list-style: none;
+    display: flex; align-items: center; gap: 10px;
+    padding: 14px 18px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary:focus-visible { outline: 3px solid var(--red); outline-offset: -3px; }
+  summary .chev { margin-left: auto; transition: transform .2s ease; }
+  details[open] summary .chev { transform: rotate(180deg); }
+  .panel {
+    border-top: 2px dashed var(--line);
+    padding: 12px 18px 16px;
+    font-size: 0.93rem;
+  }
+  .panel ol, .panel ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+  .panel .note {
+    margin: 12px 0 0;
+    background: var(--sun-soft);
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 0.88rem;
+  }
+
+  footer {
+    margin-top: 32px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  footer strong { color: var(--ink); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn, summary .chev { transition: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <section class="profile">
+    <div class="avatar" aria-hidden="true">
+      <!-- Tomo, versi kartun datar: mata bulat putih besar, pupil hitam -->
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <rect width="120" height="120" fill="#ffc93c"/>
+        <!-- badan: jaket coklat + batik -->
+        <path d="M18 120 C22 96 40 88 60 88 C80 88 98 96 102 120 Z" fill="#7a4a2b"/>
+        <path d="M48 88 L60 112 L72 88 Z" fill="#c0392b"/>
+        <circle cx="56" cy="96" r="2" fill="#ffc93c"/><circle cx="63" cy="101" r="2" fill="#ffc93c"/>
+        <!-- leher -->
+        <rect x="52" y="76" width="16" height="14" fill="#b9784a"/>
+        <!-- kepala -->
+        <ellipse cx="60" cy="54" rx="30" ry="32" fill="#c98a58"/>
+        <!-- telinga -->
+        <ellipse cx="30" cy="57" rx="5" ry="8" fill="#c98a58"/>
+        <ellipse cx="90" cy="57" rx="5" ry="8" fill="#c98a58"/>
+        <!-- rambut belah samping -->
+        <path d="M29 50 C27 24 48 16 64 18 C82 20 94 32 91 50 C86 38 76 32 66 31 C58 36 44 38 29 50 Z" fill="#1b1b1f"/>
+        <!-- alis tebal -->
+        <rect x="38" y="41" width="16" height="4.5" rx="2.2" fill="#1b1b1f"/>
+        <rect x="66" y="41" width="16" height="4.5" rx="2.2" fill="#1b1b1f"/>
+        <!-- mata bulat putih besar -->
+        <circle cx="46" cy="55" r="9" fill="#fff"/>
+        <circle cx="74" cy="55" r="9" fill="#fff"/>
+        <circle cx="47" cy="56" r="3.6" fill="#111"/>
+        <circle cx="75" cy="56" r="3.6" fill="#111"/>
+        <!-- hidung -->
+        <path d="M60 60 C57 66 58 68 62 68" stroke="#9c6238" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <!-- kumis tipis -->
+        <path d="M50 73 C55 70 65 70 70 73" stroke="#1b1b1f" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+        <!-- senyum lebar -->
+        <path d="M49 76 C54 85 66 85 71 76 Z" fill="#fff" stroke="#6b2d1a" stroke-width="1.6" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h1>Lagi Bangun Karir</h1>
+    <p class="handle">@lagibangunkarir</p>
+    <p class="bio">Bangun karier pelan-pelan, yang penting jalan terus. 🏍️💼<br>Cerita, tips, dan semangat buat kamu yang lagi berjuang cari kerja.</p>
+  </section>
+
+  <section class="series" aria-labelledby="serial-judul">
+    <span class="eyebrow">Serial animasi</span>
+    <h2 id="serial-judul">Tomo Sang Pencari Kerja</h2>
+    <p>Anak rantau asal Jawa Timur yang datang ke Jakarta naik motor buat cari kerja. Medok itu identitas!</p>
+    <ol class="episodes">
+      <li><span class="ep-num">1</span> Tomo Datang ke Jakarta</li>
+      <li><span class="ep-num">2</span> Hari Kedua: CV &amp; Loker Palsu</li>
+      <li><span class="ep-num">3</span> Interview Pertama <span class="ep-soon">Segera tayang</span></li>
+    </ol>
+    <a class="btn btn-sun" href="https://www.instagram.com/lagibangunkarir/reels/" target="_blank" rel="noopener">▶ Tonton serialnya di Instagram</a>
+  </section>
+
+  <nav class="links" aria-label="Tautan">
+
+    <details>
+      <summary>📝 Tips singkat bikin CV <span class="chev" aria-hidden="true">▾</span></summary>
+      <div class="panel">
+        <ol>
+          <li>Cukup <strong>1 halaman</strong>, rapi, dan mudah dibaca.</li>
+          <li>Tulis <strong>nomor HP &amp; email aktif</strong> di bagian paling atas.</li>
+          <li>Sesuaikan isi CV dengan <strong>lowongan yang dilamar</strong>.</li>
+          <li>Tulis pengalaman dengan <strong>hasil nyata</strong>, misalnya "melayani 50+ pelanggan per hari".</li>
+          <li>Simpan dan kirim dalam bentuk <strong>PDF</strong>, beri nama file yang jelas: <em>CV_NamaKamu.pdf</em>.</li>
+        </ol>
+      </div>
+    </details>
+
+    <details>
+      <summary>🚨 Cara cek loker palsu <span class="chev" aria-hidden="true">▾</span></summary>
+      <div class="panel">
+        <ul>
+          <li>Diminta <strong>bayar</strong> untuk seragam, pelatihan, atau tes? <strong>Tolak.</strong></li>
+          <li>Gaji terlalu besar untuk syarat yang terlalu mudah.</li>
+          <li>Email memakai alamat gratisan, bukan domain perusahaan.</li>
+          <li>Interview mendadak di tempat yang tidak jelas, atau hanya lewat chat.</li>
+          <li>Cek nama perusahaan di Google dan situs resminya sebelum datang.</li>
+        </ul>
+        <p class="note">Perusahaan resmi <strong>tidak pernah</strong> meminta uang dari pelamar.</p>
+      </div>
+    </details>
+
+    <a class="btn" href="https://www.instagram.com/lagibangunkarir/" target="_blank" rel="noopener">📸 Follow Instagram @lagibangunkarir</a>
+    <a class="btn btn-red" href="https://ig.me/m/lagibangunkarir" target="_blank" rel="noopener">💬 Tanya-tanya soal karier lewat DM</a>
+
+  </nav>
+
+  <footer>
+    <p><strong>Semangat terus!</strong> Setiap karier besar dimulai dari hari pertama yang berani.</p>
+    <p>© 2026 @lagibangunkarir</p>
+  </footer>
+
+</main>
+</body>
+</html>
