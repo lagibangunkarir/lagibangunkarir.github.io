@@ -136,6 +136,43 @@
   .product ul { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 6px; font-size: 0.92rem; font-weight: 600; }
   .product li::before { content: "✓ "; color: var(--red); font-weight: 800; }
 
+  /* Rekomendasi Shopee */
+  .gear {
+    margin-top: 22px;
+    background: var(--sun-soft);
+    border: 3px solid var(--ink);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 18px;
+  }
+  .gear h2 { font-size: 1.2rem; margin: 10px 0 4px; }
+  .gear > p { margin: 0 0 14px; color: var(--muted); font-size: 0.9rem; }
+  .gear-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .gear-item {
+    display: flex; align-items: center; gap: 12px;
+    background: var(--card);
+    border: 2px solid var(--ink);
+    border-radius: 14px;
+    padding: 10px 12px;
+    color: var(--ink);
+    text-decoration: none;
+    transition: transform .12s ease;
+  }
+  .gear-item:hover { transform: translateY(-2px); }
+  .gear-item:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+  .gear-ico {
+    flex: none; width: 46px; height: 46px;
+    display: grid; place-items: center;
+    background: var(--sun); border-radius: 12px;
+    font-size: 1.5rem;
+  }
+  .gear-text { display: grid; gap: 1px; min-width: 0; }
+  .gear-text strong { font-size: 0.95rem; }
+  .gear-text span { font-size: 0.8rem; color: var(--muted); }
+  .gear-go { margin-left: auto; flex: none; font-size: 0.78rem; font-weight: 800; color: #ee4d2d; white-space: nowrap; }
+  .gear .disclose { margin: 12px 0 0; font-size: 0.75rem; color: var(--muted); text-align: center; }
+  @media (prefers-reduced-motion: reduce) { .gear-item { transition: none; } }
+
   /* Panduan yang bisa dibuka */
   details {
     background: var(--card);
@@ -251,6 +288,31 @@
       </ul>
       <a class="btn btn-red" href="https://lagibangunkarir.myr.id/catalog/paket-cv-siap-kerja/" target="_blank" rel="noopener">🛒 Lihat &amp; beli template CV</a>
     </div>
+  </section>
+
+  <section class="gear" aria-labelledby="gear-judul">
+    <span class="eyebrow">Rekomendasi</span>
+    <h2 id="gear-judul">🎒 Perlengkapan Melamar Kerja ala Tomo</h2>
+    <p>Barang-barang yang bikin kamu lebih siap dan pede saat berangkat interview.</p>
+    <ul class="gear-list">
+      <li><a class="gear-item" href="https://s.shopee.co.id/1gK8wTNrMC?share_channel_code=1" target="_blank" rel="sponsored noopener">
+        <span class="gear-ico" aria-hidden="true">👔</span>
+        <span class="gear-text"><strong>Kemeja polos lengan panjang</strong><span>Wajib punya untuk interview</span></span>
+        <span class="gear-go">Shopee →</span></a></li>
+      <li><a class="gear-item" href="https://s.shopee.co.id/4B1Tv0bxOJ?share_channel_code=1" target="_blank" rel="sponsored noopener">
+        <span class="gear-ico" aria-hidden="true">👞</span>
+        <span class="gear-text"><strong>Sepatu pantofel formal</strong><span>Rapi dan nyaman dipakai seharian</span></span>
+        <span class="gear-go">Shopee →</span></a></li>
+      <li><a class="gear-item" href="https://s.shopee.co.id/80ECUABBdF?share_channel_code=1" target="_blank" rel="sponsored noopener">
+        <span class="gear-ico" aria-hidden="true">🎒</span>
+        <span class="gear-text"><strong>Tas ransel laptop</strong><span>Muat laptop, map CV, dan bekal</span></span>
+        <span class="gear-go">Shopee →</span></a></li>
+      <li><a class="gear-item" href="https://s.shopee.co.id/6fiotj7obA?share_channel_code=1" target="_blank" rel="sponsored noopener">
+        <span class="gear-ico" aria-hidden="true">🌧️</span>
+        <span class="gear-text"><strong>Jas hujan + pelindung ransel</strong><span>Naik motor kayak Tomo? CV tetap kering</span></span>
+        <span class="gear-go">Shopee →</span></a></li>
+    </ul>
+    <p class="disclose">Link afiliasi: aku dapat komisi kecil tanpa biaya tambahan untukmu. Harga mengikuti Shopee.</p>
   </section>
 
   <nav class="links" aria-label="Tautan">
